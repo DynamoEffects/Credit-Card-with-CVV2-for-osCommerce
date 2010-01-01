@@ -146,7 +146,7 @@
           break;
       }
       
-      if (MODULE_PAYMENT_CC_CVV2_REQUIRE_CVV2 == 'True' && strlen($_POST['cc_cvv2_cvv2'] < 3)) {
+      if (MODULE_PAYMENT_CC_CVV2_REQUIRE_CVV2 == 'True' && strlen($_POST['cc_cvv2_cvv2']) < 3) {
         if ($error != '') $error .= '<br />';
         $error .= MODULE_PAYMENT_CC_CVV2_TEXT_JS_CC_CVV2_CVV2;
       }
