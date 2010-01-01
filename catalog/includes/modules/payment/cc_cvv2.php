@@ -163,8 +163,11 @@
       $order->info['cc_number'] = $_POST['cc_cvv2_number'];
       $order->info['cc_expires'] = $_POST['cc_cvv2_expires_month'] . $_POST['cc_cvv2_expires_year'];
       $order->info['cc_cvv2'] = $_POST['cc_cvv2_cvv2'];
-      $order->info['order_status'] = $this->order_status;
-
+      
+      if ($this->order_status > 0) {
+        $order->info['order_status'] = $this->order_status;
+      }
+      
       if ( (defined('MODULE_PAYMENT_CC_CVV2_EMAIL')) && (tep_validate_email(MODULE_PAYMENT_CC_CVV2_EMAIL)) ) {
         $len = strlen($_POST['cc_cvv2_number']);
 
