@@ -61,7 +61,7 @@
             '      error = 1;' . "\n" .
             '    }' . "\n";
       if (MODULE_PAYMENT_CC_CVV2_REQUIRE_CVV2 == 'True') {
-        $js .= '    var cc_cvv2_cvv2 = document.checkout_payment.cc_cvv2_number.value;' . "\n" .
+        $js .= '    var cc_cvv2_cvv2 = document.checkout_payment.cc_cvv2_cvv2.value;' . "\n" .
                '    if (cc_cvv2_cvv2 == "" || cc_cvv2_cvv2.length < 3) {' . "\n" .
                '      error_message = error_message + "' . MODULE_PAYMENT_CC_CVV2_TEXT_JS_CC_CVV2_CVV2 . '";' . "\n" .
                '      error = 1;' . "\n" .
